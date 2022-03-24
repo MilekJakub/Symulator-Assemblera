@@ -8,15 +8,6 @@
             <Setter Property="Orientation" Value="Horizontal"/>
         </Style>
 
-        <Style TargetType="Label">
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="FontSize" Value="24"/>
-        </Style>
-
-        <Style TargetType="RadioButton">
-            <Setter Property="Margin" Value="14, 0, 14, 0"/>
-            <Setter Property="FontSize" Value="24"/>
-        </Style>
     </Application.Resources>
 </Application>
     
