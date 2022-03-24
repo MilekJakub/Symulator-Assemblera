@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Text.RegularExpressions;
 
 namespace Symulator_Assemblera
 {
@@ -24,11 +23,12 @@ namespace Symulator_Assemblera
         public MainWindow()
         {
             InitializeComponent();
+            movButton.Click += MovButton_Click;
         }
-        private void PreviewTextInput(object sender, TextCompositionEventArgs e)
+
+        private void MovButton_Click(object sender, RoutedEventArgs e)
         {
-            Regex regex = new Regex("[^0-9]+");
-            e.Handled = regex.IsMatch(e.Text);
+            
         }
     }
 }

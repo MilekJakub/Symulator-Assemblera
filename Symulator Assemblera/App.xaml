@@ -8,6 +8,28 @@
             <Setter Property="Orientation" Value="Horizontal"/>
         </Style>
 
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style TargetType="TextBox" x:Key="normalTextBox">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="MinWidth" Value="100"/>
+        </Style>
+
+        <Style TargetType="TextBox" x:Key="disabledTextBox">
+            <Setter Property="IsEnabled" Value="False"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="MinWidth" Value="100"/>
+        </Style>
+
     </Application.Resources>
 </Application>
     
