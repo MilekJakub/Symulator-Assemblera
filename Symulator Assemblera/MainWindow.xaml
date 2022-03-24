@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Symulator_Assemblera"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" MinHeight="450" MinWidth="800">
+        Title="Symulator Assemblera" Height="450" Width="800" MinHeight="450" MinWidth="800">
     <Grid Margin="10">
 
         <Grid.ColumnDefinitions>
@@ -27,22 +27,22 @@
 
         <StackPanel Grid.Row="0" HorizontalAlignment="Center">
             <Label VerticalAlignment="Center" HorizontalAlignment="Center">AX</Label>
-            <TextBox x:Name="axInput" Style="{StaticResource normalTextBox}"/>
+            <TextBox Text="0" x:Name="axInput" Style="{StaticResource normalTextBox}"/>
         </StackPanel>
 
         <StackPanel Grid.Row="1" HorizontalAlignment="Center">
             <Label VerticalAlignment="Center" HorizontalAlignment="Center">BX</Label>
-            <TextBox x:Name="bxInput" Style="{StaticResource normalTextBox}"/>
+            <TextBox Text="0" x:Name="bxInput" Style="{StaticResource normalTextBox}"/>
         </StackPanel>
 
         <StackPanel Grid.Row="2" HorizontalAlignment="Center">
             <Label VerticalAlignment="Center" HorizontalAlignment="Center">CX</Label>
-            <TextBox x:Name="cxInput" Style="{StaticResource normalTextBox}"/>
+            <TextBox Text="0" x:Name="cxInput" Style="{StaticResource normalTextBox}"/>
         </StackPanel>
 
         <StackPanel Grid.Row="3" HorizontalAlignment="Center">
             <Label VerticalAlignment="Center" HorizontalAlignment="Center">DX</Label>
-            <TextBox x:Name="dxInput" Style="{StaticResource normalTextBox}"/>
+            <TextBox Text="0" x:Name="dxInput" Style="{StaticResource normalTextBox}"/>
         </StackPanel>
 
         <StackPanel Grid.Row="4" HorizontalAlignment="Center">
@@ -65,7 +65,8 @@
             <TextBox x:Name="dxValue" Style="{StaticResource disabledTextBox}" Text="0"/>
         </StackPanel>
 
-        <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Margin="10">
+        <Border Background="AliceBlue" BorderBrush="Aqua" BorderThickness="1" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Margin="10">
+        <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -84,13 +85,15 @@
             <Label Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">CX</Label>
             <Label Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">DX</Label>
 
-            <RadioButton x:Name="naAX" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <RadioButton x:Name="naBX" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <RadioButton x:Name="naCX" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <RadioButton x:Name="naDX" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <RadioButton x:Name="zAX" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <RadioButton x:Name="zBX" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <RadioButton x:Name="zCX" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <RadioButton x:Name="zDX" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         </Grid>
+        </Border>
 
-        <Grid Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" Margin="10">
+        <Border Background="AliceBlue" BorderBrush="Aqua" BorderThickness="1" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" Margin="10">
+            <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -110,12 +113,12 @@
             <Label Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">CX</Label>
             <Label Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">DX</Label>
 
-            <RadioButton x:Name="zAX" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <RadioButton x:Name="zBX" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <RadioButton x:Name="zCX" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <RadioButton x:Name="zDX" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <RadioButton x:Name="naAX" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <RadioButton x:Name="naBX" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <RadioButton x:Name="naCX" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <RadioButton x:Name="naDX" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         </Grid>
-        
+        </Border>
         <Button x:Name="movButton" Grid.Column="3" Margin="5">MOV</Button>
         <Button x:Name="xchgButton" Grid.Column="3" Grid.Row="1" Margin="5">XCHG</Button>
 
