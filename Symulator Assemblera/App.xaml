@@ -4,13 +4,17 @@
              xmlns:local="clr-namespace:Symulator_Assemblera"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+        </Style>
+
         <Style TargetType="StackPanel">
             <Setter Property="Orientation" Value="Horizontal"/>
         </Style>
 
         <Style TargetType="Label">
-            <Setter Property="FontSize" Value="24"/>
-            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="16"/>
         </Style>
 
         <Style TargetType="TextBox" x:Key="normalTextBox">
@@ -32,58 +36,3 @@
 
     </Application.Resources>
 </Application>
-    
-    
-<!--
-        <Style TargetType="StackPanel">
-            <Setter Property="Orientation" Value="Horizontal"/>
-        </Style>
-
-        <Style TargetType="Label">
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="FontSize" Value="24"/>
-        </Style>
-
-        <Style TargetType="RadioButton">
-            <Setter Property="Margin" Value="14, 0, 14, 0"/>
-            <Setter Property="FontSize" Value="24"/>
-        </Style>
-    
-        <StackPanel Orientation="Vertical" Margin="10">
-            <Border Background="AliceBlue" BorderBrush="Aqua" BorderThickness="1" Margin="5">
-                <StackPanel Orientation="Vertical" Margin="10">
-                    <StackPanel>
-                        <Label Width="53">Z:</Label>
-                        <Label Width="43">AX</Label>
-                        <Label Width="43">BX</Label>
-                        <Label Width="43">CX</Label>
-                        <Label Width="43">DX</Label>
-                    </StackPanel>
-                    <StackPanel Margin="53, 0, 0, 0">
-                        <RadioButton x:Name="zAX"></RadioButton>
-                        <RadioButton x:Name="zBX"></RadioButton>
-                        <RadioButton x:Name="zCX"></RadioButton>
-                        <RadioButton x:Name="zDX"></RadioButton>
-                    </StackPanel>
-                </StackPanel>
-            </Border>
-
-            <Border Background="AliceBlue" BorderBrush="Aqua" BorderThickness="1" Margin="5">
-                <StackPanel Orientation="Vertical" Margin="10">
-                    <StackPanel>
-                        <Label>NA:</Label>
-                        <Label Width="43">AX</Label>
-                        <Label Width="43">BX</Label>
-                        <Label Width="43">CX</Label>
-                        <Label Width="43">DX</Label>
-                    </StackPanel>
-                    <StackPanel Margin="53, 0, 0, 0">
-                        <RadioButton x:Name="naAX"></RadioButton>
-                        <RadioButton x:Name="naBX"></RadioButton>
-                        <RadioButton x:Name="naCX"></RadioButton>
-                        <RadioButton x:Name="naDX"></RadioButton>
-                    </StackPanel>
-                </StackPanel>
-            </Border>
-        </StackPanel>
--->
