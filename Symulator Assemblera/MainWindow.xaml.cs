@@ -125,7 +125,7 @@ namespace Symulator_Assemblera
             }
             if (from == -1)
             {
-                MessageBox.Show("Invalid selection for the XCGH command.", "Invalid selection", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Invalid selection for the XCGH instruction.", "Invalid selection", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
@@ -142,7 +142,7 @@ namespace Symulator_Assemblera
             }
             if (on == -1)
             {
-                MessageBox.Show("Invalid selection for the XCGH command.", "Invalid selection", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Invalid selection for the XCGH instruction.", "Invalid selection", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
 
@@ -165,6 +165,14 @@ namespace Symulator_Assemblera
             if (String.IsNullOrWhiteSpace(input))
                 input = "0";
 
+            bool isNegative = false;
+            if (input[0] == '-')
+            {
+                string tempStr = input.Substring(1);
+                input = tempStr;
+                isNegative = true;
+            }
+
             int temp;
 
             try
@@ -173,9 +181,12 @@ namespace Symulator_Assemblera
             }
             catch (Exception)
             {
-                MessageBox.Show($"{input} is not a valid hexadecimal number.", "Invalid value", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show($"{input} is not a valid hexadecimal number.", "Invalid value", MessageBoxButton.OK, MessageBoxImage.Error);
                 temp = 0;
             }
+
+            if(isNegative)
+                temp *= -1;
 
             return temp.ToString();
         }
